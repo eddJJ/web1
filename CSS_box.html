@@ -2,26 +2,64 @@
   <head>
     <title>WEB1 - CSS</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="colors.js"></script>   
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script> 
+    <style>
+      body {
+        margin: 0px;
+      }
+      p {
+        padding-left: 20px;
+      }
+      a {
+        color:blue;
+        text-decoration: none;
+      }
+      h1 {
+        font-size: 60px;
+        text-align: center;
+        border-bottom: 1px solid darkgray;
+        padding: 20px;
+        margin: 0pt;
+      }
+      ol {
+        border-right: 1px solid darkgray;
+      }
+      h2 {
+        color: coral;
+        display: inline;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 180px auto;
+      }
+
+      #grid ol {        
+        padding-top: 20px;
+        padding-left: 50px;
+        margin: 0px;
+      }
+      #article {
+        padding: 20px;
+      }    
+      @media(max-width:800px) {
+        #grid {
+          display: block;
+        }
+        ol {
+        border-right: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <h1><a href="index.html">WEB</a></h1>
-    <input id="night_day" type="button" value="night" onclick="
-      nightDayHandler(this);
-    ">
+    <h1><a href="index.html" style="color: black;">WEB</a></h1>
     <div id=grid>
       <ol>
         <li><a href="HTML.html">HTML</a></li>
         <li><a href="CSS.html">CSS</a></li>
         <li><a href="JavaScript.html">JavaScript</a></li>
       </ol>
-    
+
       <div id=article>
         <h2>CSS</h2>
         
@@ -31,5 +69,5 @@
         <p style="margin-top:45px;">CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
         </p>
       </div>
-    </div>    
+    </div>
   </body>
